@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odoo × 會計師 × AI 應用研討會 | 2026年6月26日</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #f7f9f8;
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  /* Hero */
+  .hero {
+    border-left: 3px solid #1D9E75;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: #0F6E56;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .hero-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #111;
+    margin-bottom: 0.85rem;
+  }
+  .hero-sub {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.75;
+  }
+
+  /* Pain */
+  .pain-box {
+    background: #f0f4f2;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .pain-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.55;
+  }
+  .pain-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #D85A30;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  hr.div {
+    border: none;
+    border-top: 0.5px solid #dde8e3;
+    margin: 1.75rem 0;
+  }
+
+  /* Solution */
+  .solution-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #0F6E56;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .solution-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+  }
+  .solution-body {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Agenda */
+  .agenda { margin-bottom: 1.75rem; }
+  .agenda-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 0.5px solid #dde8e3;
+  }
+  .agenda-row:last-child { border-bottom: none; }
+  .agenda-icon {
+    font-size: 17px;
+    color: #1D9E75;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  .agenda-text { font-size: 14px; color: #222; line-height: 1.6; }
+
+  /* Speakers */
+  .speakers-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 0.85rem;
+  }
+  .speakers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 1.75rem;
+  }
+  .speaker-card {
+    background: #fff;
+    border: 0.5px solid #c8dfd6;
+    border-radius: 10px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .speaker-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #e1f5ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #0F6E56;
+    margin: 0 auto 9px;
+  }
+  .speaker-name { font-size: 13px; font-weight: 500; color: #111; margin-bottom: 3px; }
+  .speaker-role { font-size: 11px; color: #888; line-height: 1.4; }
+
+  /* Meta */
+  .meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+  }
+  .meta-card {
+    background: #f0f4f2;
+    border-radius: 10px;
+    padding: 13px 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+  }
+  .meta-icon { font-size: 19px; color: #1D9E75; flex-shrink: 0; margin-top: 2px; }
+  .meta-label { font-size: 11px; color: #888; margin-bottom: 4px; }
+  .meta-value { font-size: 14px; font-weight: 500; color: #111; line-height: 1.5; }
+  .meta-sub { font-size: 11px; color: #999; margin-top: 2px; }
+
+  /* Gift */
+  .gift {
+    border: 0.5px solid #9FE1CB;
+    background: #e8f7f2;
+    border-radius: 10px;
+    padding: 13px 16px;
+    margin-bottom: 1.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+  }
+  .gift-icon { font-size: 19px; color: #0F6E56; flex-shrink: 0; margin-top: 2px; }
+  .gift-text { font-size: 13px; color: #085041; line-height: 1.65; }
+  .gift-text strong { font-weight: 500; }
+
+  /* CTA */
+  .cta-block { text-align: center; padding: 1.5rem 0 0.5rem; }
+  .scarcity { font-size: 12px; color: #D85A30; margin-bottom: 1rem; letter-spacing: 0.04em; }
+  .cta-btn {
+    display: inline-block;
+    background: #1D9E75;
+    color: #e8f7f2;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 14px 36px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-family: 'Noto Sans TC', sans-serif;
+    transition: background 0.18s;
+  }
+  .cta-btn:hover { background: #0F6E56; }
+  .cta-footer { font-size: 12px; color: #999; margin-top: 12px; }
+
+  @media (max-width: 500px) {
+    .pain-grid { grid-template-columns: 1fr; }
+    .speakers { grid-template-columns: 1fr 1fr; }
+    .meta { grid-template-columns: 1fr; }
+    .hero-title { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero">
+    <p class="eyebrow">專屬邀請 · 免費入場 · 2026年6月26日</p>
+    <h1 class="hero-title">您的事務所，<br>是否仍在用人手做機器能做的事？</h1>
+    <p class="hero-sub">一場為香港會計及審計行業而設的實戰研討會，探討 Odoo ERP + AI 如何改變您的日常工作。</p>
+  </div>
+
+  <!-- Pain Points -->
+  <div class="pain-box">
+    <p class="section-label">行業痛點 · 您是否似曾相識？</p>
+    <div class="pain-grid">
+      <div class="pain-item"><div class="pain-dot"></div><span>每月結帳花費大量人手核對數字</span></div>
+      <div class="pain-item"><div class="pain-dot"></div><span>客戶文件散落 Email、WhatsApp、紙張</span></div>
+      <div class="pain-item"><div class="pain-dot"></div><span>審計底稿更新耗時，易出錯</span></div>
+      <div class="pain-item"><div class="pain-dot"></div><span>舊有軟件整合困難，無法擴展</span></div>
+      <div class="pain-item"><div class="pain-dot"></div><span>稅務申報截止期一到，團隊加班不斷</span></div>
+      <div class="pain-item"><div class="pain-dot"></div><span>難以吸引及留住年輕會計專才</span></div>
+    </div>
+  </div>
+
+  <hr class="div">
+
+  <!-- Solution -->
+  <p class="solution-label">解決方向</p>
+  <h2 class="solution-title">Odoo ERP + AI：讓系統做苦差，您專注增值服務</h2>
+  <p class="solution-body">是次研討會由專業會計師及 Odoo 實踐者主講，分享真實落地案例，包括由 MYOB、QuickBooks、Peachtree 遷移至 Odoo + AI 的完整過程，以及 OpenClaw AI 如何與 ERP 協作提升財務及行政效率。</p>
+
+  <!-- Agenda -->
+  <div class="agenda">
+    <div class="agenda-row">
+      <i class="ti ti-robot agenda-icon" aria-hidden="true"></i>
+      <span class="agenda-text">AI 如何顛覆傳統會計與審計流程——實際應用場景逐一拆解</span>
+    </div>
+    <div class="agenda-row">
+      <i class="ti ti-building agenda-icon" aria-hidden="true"></i>
+      <span class="agenda-text">Odoo 在會計師事務所的實戰案例——由其他軟件轉用的真實體驗</span>
+    </div>
+    <div class="agenda-row">
+      <i class="ti ti-chart-bar agenda-icon" aria-hidden="true"></i>
+      <span class="agenda-text">OpenClaw + AI 提升財務、行政及企業運營效率——數據說話</span>
+    </div>
+    <div class="agenda-row">
+      <i class="ti ti-messages agenda-icon" aria-hidden="true"></i>
+      <span class="agenda-text">互動問答與業界交流——帶著問題來，帶著答案走</span>
+    </div>
+  </div>
+
+  <hr class="div">
+
+  <!-- Speakers -->
+  <p class="speakers-label">主講嘉賓</p>
+  <div class="speakers">
+    <div class="speaker-card">
+      <div class="speaker-avatar">林</div>
+      <p class="speaker-name">林英鴻</p>
+      <p class="speaker-role">大灣區會計師聯會會長</p>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-avatar">梁</div>
+      <p class="speaker-name">梁華</p>
+      <p class="speaker-role">中小企國際聯盟會長 · 專業會計師</p>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-avatar">CC</div>
+      <p class="speaker-name">Caleb Cheng</p>
+      <p class="speaker-role">Yuni Tech Ltd 聯合創辦人</p>
+    </div>
+  </div>
+
+  <!-- Meta -->
+  <div class="meta">
+    <div class="meta-card">
+      <i class="ti ti-calendar meta-icon" aria-hidden="true"></i>
+      <div>
+        <p class="meta-label">日期及時間</p>
+        <p class="meta-value">2026年6月26日（週五）<br>下午 2:30 – 5:00</p>
+      </div>
+    </div>
+    <div class="meta-card">
+      <i class="ti ti-map-pin meta-icon" aria-hidden="true"></i>
+      <div>
+        <p class="meta-label">地點</p>
+        <p class="meta-value">Odoo HK Ltd<br>西營盤干諾道西118號 31樓 3105室</p>
+        <p class="meta-sub">西營盤站 A2 出口，步行約3分鐘</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gift -->
+  <div class="gift">
+    <i class="ti ti-gift gift-icon" aria-hidden="true"></i>
+    <p class="gift-text">出席即送：<strong>Odoo 與 MYOB、Peachtree、QuickBooks、Xero 功能全面對比白皮書</strong>——助您評估轉型方案，帶走即用。</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <p class="scarcity">名額有限，先到先得</p>
+    <a class="cta-btn" href="https://www.astasys.com/event/odoo-x-%E6%9C%83%E8%A8%88%E5%B8%AB%E4%BA%8B%E5%8B%99%E6%89%80%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%87%89%E7%94%A8%E5%88%86%E4%BA%AB-9/register">立即免費報名</a>
+    <p class="cta-footer">費用全免 · 支持單位：好朋友商務會 Simon Chang</p>
+  </div>
+
+</div>
+</body>
+</html>
